@@ -15,6 +15,7 @@
   <a><img src="https://img.shields.io/badge/Service-PHP5.6-green.svg"></a>
   <a><img src="https://img.shields.io/badge/Service-NginX-green.svg"></a>
   <a><img src="https://img.shields.io/badge/Service-MySQL-green.svg"></a>
+  <a><img src="https://img.shields.io/badge/Service-SSH2-green.svg"></a>
   <a><img src="https://img.shields.io/badge/Service-XMLParser-green.svg"></a>
  </p>
 
