@@ -176,22 +176,24 @@ function InstPanel(){
  # Change dir to Webroot
  cd /home/panel/html
  
- # Deflate panel and set permissions
+ # Deflate panel
  unzip redpanel.zip
  rm -f redpanel.zip
+ 
+ # Set permissions
+ chown -R www-data:www-data /home/panel/html
+ chmod -R g+rw /home/panel/html
  
  # Install XML Parser Perl
  apt-get install libxml-parser-perl -y -f
 }
 
 function InstImpSql(){
+ 
  # Import SQL to Database
-so3=$(expect -c "
-spawn mysql -u root -p $DatabaseName < /home/panel/html/database/sshpanel.sql sleep 3
-expect \"\";  sleep 3; send \"$DatabasePass\r\"
-expect eof; ")
-echo "$so3"
-
+ mysql -u root -p$DatabasePass $DatabaseName < /home/panel/html/database/sshpanel.sql
+ sleep 3
+ 
  # Change Database C/home/panel/htmlentials on .env
  sed -i "s|mypassword|$DatabasePass|g" /home/panel/html/system/.env
  sed -i "s|mydatabase|$DatabaseName|g" /home/panel/html/system/.env
