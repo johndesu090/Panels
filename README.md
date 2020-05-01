@@ -1,4 +1,4 @@
-<h1 align="center">Premium Panel Scripts<img src="https://img.shields.io/badge/Version-1.0.6-blue.svg"></h1>
+<h1 align="center">Premium Panel Scripts<img src="https://img.shields.io/badge/Version-2.0.1-blue.svg"></h1>
 
 <p align="center">This AutoScript is made by FordSenpai to minimize the time consumed and user involvement in setting up your VPS Panel</p>
 <p align="center">[Donations] GCASH: 09206200840 PAYPAL: johnford090@gmail.com FACEBOOK: John Ford Mangiliman</p>
