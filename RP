@@ -170,7 +170,7 @@ function InstNginx(){
 function InstPanel(){
  
  # Pull RED Source Code
- wget -O /home/panel/html/redpanel.zip https://www.dropbox.com/s/v5gm34nglwvz5re/redpanel.zip
+ wget -O /home/panel/html/redpanel.zip https://www.dropbox.com/s/q9axb0037vxneid/redpanel.zip
  sleep 2
  
  # Change dir to Webroot
