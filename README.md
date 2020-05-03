@@ -30,3 +30,9 @@ wget https://raw.githubusercontent.com/johndesu090/Panels/master/DP && chmod +x 
   ```html
 wget https://raw.githubusercontent.com/johndesu090/Panels/master/RP && chmod +x RP && ./RP
   ```
+  
+<h3 align="center">Installation (ELITE Panel)</h3>
+
+  ```html
+wget https://raw.githubusercontent.com/johndesu090/Panels/master/EP && chmod +x EP && ./EP
+  ```
