@@ -21,7 +21,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com);
 #DatabasePass='JohnFordTV'
 
 # Default Database
-#DatabaseName='REDpanel'
+#DatabaseName='elitepanel'
 
 # Server local time
 MyVPS_Time='Asia/Manila'
@@ -48,11 +48,11 @@ function InstAsk(){
  echo "First I need to know the new password of MySQL root user:"
  read -p "Password: " -e -i JohnFordTV DatabasePass
  echo ""
- echo "Finally, name the Database Name for RED Panel"
+ echo "Finally, name the Database Name for ELITE Panel"
  echo " Please, use one word only, no special characters other than Underscore (_)"
  read -p " Database Name: " -e -i elitepanel DatabaseName
  echo ""
- echo "Okay, that's all I need. We are ready to setup your RED Panel now"
+ echo "Okay, that's all I need. We are ready to setup your ELITE Panel now"
  read -n1 -r -p "Press any key to continue..."
 }
 
