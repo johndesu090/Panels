@@ -176,7 +176,7 @@ function InstNginx(){
 function InstPanel(){
  
  # Pull RED Source Code
- wget -O /home/panel/html/elitepanel.zip https://www.dropbox.com/s/o0dwshz64gj38aa/elitepanel.zip
+ wget -O /home/panel/html/elitepanel.zip https://www.dropbox.com/s/9cfk9yqfw3yvs6s/elitepanel.zip
  sleep 2
  
  # Change dir to Webroot
