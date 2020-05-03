@@ -21,7 +21,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com);
 #DatabasePass='JohnFordTV'
 
 # Default Database
-#DatabaseName='elitepanel'
+#DatabaseName='REDpanel'
 
 # Server local time
 MyVPS_Time='Asia/Manila'
@@ -46,11 +46,17 @@ function InstAsk(){
  echo "You can leave the default option and just hit enter if you agree with the option"
  echo ""
  echo "First I need to know the new password of MySQL root user:"
- read -p "Password: " -e -i JohnFordTV DatabasePass
+ read -p "Database Password: " -e -i JohnFordTV DatabasePass
  echo ""
- echo "Finally, name the Database Name for ELITE Panel"
+ echo "Name the Database Name for ELITE Panel"
  echo " Please, use one word only, no special characters other than Underscore (_)"
  read -p " Database Name: " -e -i elitepanel DatabaseName
+ echo ""
+ echo "Set the Admin Username of Panel"
+ read -p " Admin Username: " -e -i admin ADN
+ echo ""
+ echo "Set the Admin Password of Panel"
+ read -p " Admin Password: " -e -i adminpassword ADP
  echo ""
  echo "Okay, that's all I need. We are ready to setup your ELITE Panel now"
  read -n1 -r -p "Press any key to continue..."
@@ -189,10 +195,15 @@ function InstPanel(){
 }
 
 function InstImpSql(){
+
+ # Modify Database Admin and Password on SQL
+ sed -i "s|adminpass|$ADP|g" /home/panel/html/johnfordtvsql/debianelite.sql
+ sed -i "s|adminname|$ADN|g" /home/panel/html/johnfordtvsql/debianelite.sql
+ sleep 2
  
  # Import SQL to Database
- mysql -u root -p$DatabasePass $DatabaseName < /home/panel/html/debianelite.sql
- sleep 3
+ mysql -u root -p$DatabasePass $DatabaseName < /home/panel/html/johnfordtvsql/debianelite.sql
+ sleep 2
  
  # Change Database /home/panel/html/application/config/database.php credentials
  sed -i "s|mypassword|$DatabasePass|g" /home/panel/html/application/config/database.php
@@ -214,7 +225,7 @@ function InstDuration(){
  # Create Duration SH
  cat > /root/duration.sh <<-END
 #!/bin/bash
-mysql -h$MYIP -P3306 -uroot -p$DatabasePass $DatabaseName -e "UPDATE users SET user_duration=user_duration-1 WHERE user_duration>0"
+mysql -u root -p$DatabasePass $DatabaseName -e "UPDATE users SET user_duration=user_duration-1 WHERE user_duration>0"
 END
  # Set Permission on Duration
  cd
