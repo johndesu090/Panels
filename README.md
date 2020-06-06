@@ -7,7 +7,6 @@
 <h3 align="center">Supported Linux Distribution</h3>
 <p align="center">
   <a><img src="https://img.shields.io/badge/Support-Debian%209-red.svg"></a>
-  <a><img src="https://img.shields.io/badge/Support-Debian%2010-red.svg"></a>
   
 </p>
 <h3 align="center">Services</h3>
@@ -19,20 +18,10 @@
   <a><img src="https://img.shields.io/badge/Service-XMLParser-green.svg"></a>
  </p>
 
-<h3 align="center">Installation (OCS Panel)</h3>
+<h3 align="center">Installation</h3>
 
   ```html
 wget https://raw.githubusercontent.com/johndesu090/Panels/master/DP && chmod +x DP && ./DP
   ```
-
-<h3 align="center">Installation (RED Panel)</h3>
-
-  ```html
-wget https://raw.githubusercontent.com/johndesu090/Panels/master/RP && chmod +x RP && ./RP
-  ```
   
-<h3 align="center">Installation (ELITE Panel)</h3>
-
-  ```html
-wget https://raw.githubusercontent.com/johndesu090/Panels/master/EP && chmod +x EP && ./EP
-  ```
+<h2 align="center">Snapshots to be Uploaded</h2>
