@@ -21,7 +21,7 @@
 <h3 align="center">Installation</h3>
 
   ```html
-wget https://raw.githubusercontent.com/johndesu090/Panels/master/DP && chmod +x DP && ./DP
+wget https://raw.githubusercontent.com/johndesu090/Panels/master/install && chmod +x install && ./install
   ```
   
 <h2 align="center">Snapshots to be Uploaded</h2>
